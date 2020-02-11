@@ -16,6 +16,42 @@
 ;; lower value in your dotfile (function `dotspacemacs/user-config')
 (setq gc-cons-threshold 100000000)
 
+;;; litao
+(setq c-basic-offset 4); c c++ 缩进4个空格
+(setq c-default-style "linux"); 防止{} 出现问题
+
+;; 行号
+(global-linum-mode t)
+
+;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
+(tool-bar-mode 1)
+
+;; 关闭启动帮助画面
+(setq inhibit-splash-screen 1)
+
+
+
+;;hight-symbol
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'highlight-symbol)
+(global-set-key [(control f3)] 'highlight-symbol)
+(global-set-key [f3] 'highlight-symbol-next)
+(global-set-key [(shift f3)] 'highlight-symbol-prev)
+(global-set-key [(meta f3)] 'highlight-symbol-query-replace)
+
+;;idle-highlight-mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'idle-highlight-mode)
+;(autoload 'idle-highlight-mode "idle-highlight" "highlight the word the point is on" t)
+;(add-hook 'find-file-hook 'idle-highlight-mode)
+;(add-hook 'emacs-lisp-mode-hook 'idle-highlight-mode) 
+;(add-hook 'python-mode-hook 'idle-highlight-mode) 
+;(add-hook 'js-mode-hook 'idle-highlight-mode)
+;(add-hook 'prog-mode-hook 'idle-highlight-mode) ; all programing language
+(add-hook 'prog-mode-hook (lambda () (idle-highlight-mode t)))
+
+
+
 (defconst spacemacs-version         "0.200.13" "Spacemacs version.")
 (defconst spacemacs-emacs-min-version   "24.4" "Minimal version of Emacs.")
 
