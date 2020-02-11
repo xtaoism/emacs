@@ -1,5 +1,5 @@
 
-How to use it£¿
+How to use itï¼Ÿ
 1. Download emacs-26.1-x86_64-no-deps.zip, extract to the folder emacs26
 2. git clone git@github.com:xtaoism/emacs.git
 3. Copy the contents of folder emacs from git into emacs26
