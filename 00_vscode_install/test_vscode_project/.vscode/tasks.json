@@ -1,27 +1,33 @@
+
 {
     // 有关 tasks.json 格式的参考文档：https://go.microsoft.com/fwlink/?LinkId=733558 。
     "version": "2.0.0",
     "tasks": [{
-        "label": "g++",
+        "label": "MinGW Build",
+        "command": "gcc",
         "type": "shell", // { shell | process }
         // 适用于 Windows 的配置：
         "windows": {
-            "command": "E:/vscode/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe",
-            "args": [
-                "-g",
+            //"command": " cmake ${workspaceFolder} --build ${workspaceFolder}/build --config Debug --target all",
+            "command": "cmake --build ${workspaceFolder}/build --config Debug --target all -- ",
+           "args": [
+/*                "-g",
                 "-Wall",
-                "-std=c++11",
-                "\"${file}\"",
+                "-std=c11",
+                "${file}",
+                "*.c",
                 "-o",
-                "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
                 // 设置编译后的可执行文件的字符集为 GB2312：
                 // "-fexec-charset", "GB2312"
                 // 直接设置命令行字符集为 utf-8：
                 // chcp 65001
+*/
             ]
+
         },
         "options": {
-            "cwd": "E:/vscode/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/bin"
+            "cwd": "C:/mingw64/bin/"
         },
         // 定义此任务属于的执行组：
         "group": {
@@ -38,7 +44,7 @@
             // 控制面板是否获取焦点。默认值为 "false"：
             "focus": false,
             // 控制是否将执行的命令显示到面板中。默认值为“true”：
-            "echo": false,
+            "echo": true,
             // 控制是否在任务间共享面板。同一个任务使用相同面板还是每次运行时新创建一个面板：
             // - shared:     终端被共享，其他任务运行的输出被添加到同一个终端。
             // - dedicated:  执行同一个任务，则使用同一个终端，执行不同任务，则使用不同终端。

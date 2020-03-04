@@ -1,24 +1,26 @@
 {
     "configurations": [
         {
-            "name": "c_cpp_properties.json",
+            "name": "CMake",
             "includePath": [
                 "${workspaceFolder}/**",
-                "E:/vscode/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/include/",
-                "E:/vscode/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/",
-                "E:/vscode/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/",
-                "E:/vscode/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
-                "E:/vscode/mingw-w64/x86_64-8.1.0-release-posix-seh-rt_v6-rev0/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+                "C:/mingw64/x86_64-w64-mingw32/include",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+                "C:/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
+            "windowsSdkVersion": "10.0.18362.0",
             "compilerPath": "gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++11",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "vector-of-bool.cmake-tools"
         }
     ],
     "version": 4
