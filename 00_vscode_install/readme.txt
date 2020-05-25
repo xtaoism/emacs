@@ -47,6 +47,12 @@ c: Modify the CMakeLists.txt if we need the subfolder
 
 4. 
 ok
+
+5. Doxygen Documentation Generator,  (Recommendation)
+   For doxygen annotation
+
+
+   editor.cursorSurroundingLines = 99 cursor is always at center line, good
   
 Import:
 We must modify the json files of test_vscode_project if we set different paths of step3/step5

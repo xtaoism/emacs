@@ -9,7 +9,8 @@
         // 适用于 Windows 的配置：
         "windows": {
             //"command": " cmake ${workspaceFolder} --build ${workspaceFolder}/build --config Debug --target all",
-            "command": "cmake --build ${workspaceFolder}/build --config Debug --target all -- ",
+            //"command": "cmake --build ${workspaceFolder}/build --config Debug --target all -- ",
+           "command": "cmake --build \"${workspaceFolder}/build\" --config Debug --target all -- ",
            "args": [
 /*                "-g",
                 "-Wall",
